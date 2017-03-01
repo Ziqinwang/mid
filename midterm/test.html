@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <!-- Start Javascript Imports -->
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="js/jquery-2.2.0.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/test.js"></script>
+    <!-- End Javascript Imports -->
+
+  </head>
+  <body>
+
+    <!-- Start HTML -->
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- =====================
+      Add elements in this space
+      ====================== -->
+
+
+    </div>
+    <!-- Map -->
+    <div id="map" class="map"></div>
+
+    <script>
+        var mymap = L.map('map').setView([41.875994, -87.618916], 11);
+        L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
+          maxZoom: 18, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy;<a href="https://carto.com/attribution">CARTO</a>'
+        }).addTo(mymap);
+    </script>
+    <!-- End HTML -->
+
+  </body>
+</html>
